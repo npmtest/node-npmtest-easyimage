@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-easyimage/easyimage/easyimage.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-easyimage/node_modules/easyimage/easyimage.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-easyimage">npmtest-easyimage (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-easyimage/easyimage/easyimage.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-easyimage/node_modules/easyimage/easyimage.js</span></h1>
     <h2>
         
         Statements: <span class="metric">9.59% <small>(28 / 292)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-easyimage/easyimage/</a> &#187; easyimage.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-easyimage/node_modules/easyimage/</a> » easyimage.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1207,9 +1205,9 @@ var mkdirp = require('mkdirp');
 command('convert -version', function(err, stdout, stderr) {
 &nbsp;
 	// ImageMagick is NOT available on the system, exit with download info
-	<span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
-<span class="cstat-no" title="statement not covered" >		console.log(' ImageMagick Not Found'.red)</span>
-<span class="cstat-no" title="statement not covered" >		console.log(' EasyImage requires ImageMagick to work. Install it from http://www.imagemagick.org/script/binary-releases.php.\n')</span>
+	<span class="missing-if-branch" title="if path not taken">I</span>if (err) {
+<span class="cstat-no" title="statement not covered">		console.log(' ImageMagick Not Found'.red)</span>
+<span class="cstat-no" title="statement not covered">		console.log(' EasyImage requires ImageMagick to work. Install it from http://www.imagemagick.org/script/binary-releases.php.\n')</span>
 	}
 &nbsp;
 })
@@ -1222,12 +1220,12 @@ var error_messages = {
 };
 &nbsp;
 // general info function
-<span class="fstat-no" title="function not covered" >function info(file) {</span>
+<span class="fstat-no" title="function not covered">function info(file) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
-<span class="cstat-no" title="statement not covered" >	var parseSize = <span class="fstat-no" title="function not covered" >function(sizeString) {</span></span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var parseSize = <span class="fstat-no" title="function not covered">function(sizeString) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var unit = {</span>
+<span class="cstat-no" title="statement not covered">		var unit = {</span>
 			B: 1,
 			KB: 1000,
 			MB: 1000000,            // =1000^2
@@ -1235,85 +1233,85 @@ var error_messages = {
 			TB: 1000000000000       // =1000^4
 		};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var rx = /^(\d*\.?\d*)([KMGT]?B)$/; </span> // regex for extract the float value and its unit
-<span class="cstat-no" title="statement not covered" >		var sizeArray = rx.exec(sizeString);</span>
+<span class="cstat-no" title="statement not covered">		var rx = /^(\d*\.?\d*)([KMGT]?B)$/; </span> // regex for extract the float value and its unit
+<span class="cstat-no" title="statement not covered">		var sizeArray = rx.exec(sizeString);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return parseFloat(sizeArray[1]) * unit[sizeArray[2]];</span>
+<span class="cstat-no" title="statement not covered">		return parseFloat(sizeArray[1]) * unit[sizeArray[2]];</span>
 	};
 &nbsp;
 	//file = quoted_name(file);
 	// %z = depth, %m = type, %w = width, %h = height, %b = rounded filesize in byte, %f = filename, %x = density
-<span class="cstat-no" title="statement not covered" >	var args = ['-format']</span>
-<span class="cstat-no" title="statement not covered" >	args.push('%m %z %w %h %b %x %y %f')</span>
-<span class="cstat-no" title="statement not covered" >	args.push(file)</span>
+<span class="cstat-no" title="statement not covered">	var args = ['-format']</span>
+<span class="cstat-no" title="statement not covered">	args.push('%m %z %w %h %b %x %y %f')</span>
+<span class="cstat-no" title="statement not covered">	args.push(file)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	child = exec('identify', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >		var info = {};</span>
+<span class="cstat-no" title="statement not covered">	child = exec('identify', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">		var info = {};</span>
 		//console.log(stdout)
 		//Basic error handling
-<span class="cstat-no" title="statement not covered" >		if (stdout) {</span>
-<span class="cstat-no" title="statement not covered" >      var temp = stdout.replace(/PixelsPerInch/g, '').replace(/PixelsPerCentimeter/g, '').replace(/Undefined/g, '').split(/\s+/g);</span>
+<span class="cstat-no" title="statement not covered">		if (stdout) {</span>
+<span class="cstat-no" title="statement not covered">      var temp = stdout.replace(/PixelsPerInch/g, '').replace(/PixelsPerCentimeter/g, '').replace(/Undefined/g, '').split(/\s+/g);</span>
 &nbsp;
 			//Basic error handling:
-<span class="cstat-no" title="statement not covered" >			if (temp.length &lt; 7) {</span>
-<span class="cstat-no" title="statement not covered" >				deferred.reject(new Error(stderr || error_messages['unsupported']));</span>
+<span class="cstat-no" title="statement not covered">			if (temp.length &lt; 7) {</span>
+<span class="cstat-no" title="statement not covered">				deferred.reject(new Error(stderr || error_messages['unsupported']));</span>
 			} else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				info.type    = temp[0].toLowerCase();</span>
-<span class="cstat-no" title="statement not covered" >				info.depth   = parseInt(temp[1]);</span>
-<span class="cstat-no" title="statement not covered" >				info.width   = parseInt(temp[2]);</span>
-<span class="cstat-no" title="statement not covered" >				info.height  = parseInt(temp[3]);</span>
-<span class="cstat-no" title="statement not covered" >				info.size    = parseSize(temp[4]);</span>
-<span class="cstat-no" title="statement not covered" >				info.density = {</span>
+<span class="cstat-no" title="statement not covered">				info.type    = temp[0].toLowerCase();</span>
+<span class="cstat-no" title="statement not covered">				info.depth   = parseInt(temp[1]);</span>
+<span class="cstat-no" title="statement not covered">				info.width   = parseInt(temp[2]);</span>
+<span class="cstat-no" title="statement not covered">				info.height  = parseInt(temp[3]);</span>
+<span class="cstat-no" title="statement not covered">				info.size    = parseSize(temp[4]);</span>
+<span class="cstat-no" title="statement not covered">				info.density = {</span>
 					x: parseFloat(temp[5]),
 					y: parseFloat(temp[6]),
 				};
-<span class="cstat-no" title="statement not covered" >				info.name    = temp.slice(7).join(' ').replace(/(\r\n|\n|\r)/gm, '').trim();</span>
-<span class="cstat-no" title="statement not covered" >				info.path = file;</span>
+<span class="cstat-no" title="statement not covered">				info.name    = temp.slice(7).join(' ').replace(/(\r\n|\n|\r)/gm, '').trim();</span>
+<span class="cstat-no" title="statement not covered">				info.path = file;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				if (stderr) {</span>
-<span class="cstat-no" title="statement not covered" >					info.warnings = stderr.split('\n');</span>
+<span class="cstat-no" title="statement not covered">				if (stderr) {</span>
+<span class="cstat-no" title="statement not covered">					info.warnings = stderr.split('\n');</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				deferred.resolve(info);</span>
+<span class="cstat-no" title="statement not covered">				deferred.resolve(info);</span>
 			}
 		} else {
-<span class="cstat-no" title="statement not covered" >			deferred.reject(new Error(stderr || error_messages['unsupported']));</span>
+<span class="cstat-no" title="statement not covered">			deferred.reject(new Error(stderr || error_messages['unsupported']));</span>
 		}
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 }
 &nbsp;
 // function to quote file names, if not already
-<span class="fstat-no" title="function not covered" >function quoted_name(name) {</span>
-<span class="cstat-no" title="statement not covered" >	if (name[0] != '"') <span class="cstat-no" title="statement not covered" >name = '"' + name;</span></span>
-<span class="cstat-no" title="statement not covered" >	if (name[name.length - 1] != '"') <span class="cstat-no" title="statement not covered" >name = name + '"';</span></span>
-<span class="cstat-no" title="statement not covered" >	return name;</span>
+<span class="fstat-no" title="function not covered">function quoted_name(name) {</span>
+<span class="cstat-no" title="statement not covered">	if (name[0] != '"') <span class="cstat-no" title="statement not covered">name = '"' + name;</span></span>
+<span class="cstat-no" title="statement not covered">	if (name[name.length - 1] != '"') <span class="cstat-no" title="statement not covered">name = name + '"';</span></span>
+<span class="cstat-no" title="statement not covered">	return name;</span>
 };
 &nbsp;
 &nbsp;
 // get basic information about an image file
-exports.info = <span class="fstat-no" title="function not covered" >function(file) {</span>
-<span class="cstat-no" title="statement not covered" >	return info(file);</span>
+exports.info = <span class="fstat-no" title="function not covered">function(file) {</span>
+<span class="cstat-no" title="statement not covered">	return info(file);</span>
 };
 &nbsp;
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function directoryCheck(options, command) {</span>
+<span class="fstat-no" title="function not covered">function directoryCheck(options, command) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var targetDir = path.dirname(options.dst)</span>
-<span class="cstat-no" title="statement not covered" >	fs.exists(targetDir, <span class="fstat-no" title="function not covered" >function (exists) {</span></span>
-<span class="cstat-no" title="statement not covered" >		if (exists) {</span>
-<span class="cstat-no" title="statement not covered" >			command()</span>
+<span class="cstat-no" title="statement not covered">	var targetDir = path.dirname(options.dst)</span>
+<span class="cstat-no" title="statement not covered">	fs.exists(targetDir, <span class="fstat-no" title="function not covered">function (exists) {</span></span>
+<span class="cstat-no" title="statement not covered">		if (exists) {</span>
+<span class="cstat-no" title="statement not covered">			command()</span>
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			mkdirp(targetDir, <span class="fstat-no" title="function not covered" >function (error) {</span></span>
-<span class="cstat-no" title="statement not covered" >				if (error) {</span>
-<span class="cstat-no" title="statement not covered" >					throw new Error(error)</span>
+<span class="cstat-no" title="statement not covered">			mkdirp(targetDir, <span class="fstat-no" title="function not covered">function (error) {</span></span>
+<span class="cstat-no" title="statement not covered">				if (error) {</span>
+<span class="cstat-no" title="statement not covered">					throw new Error(error)</span>
 				}
 				else {
-<span class="cstat-no" title="statement not covered" >					command()</span>
+<span class="cstat-no" title="statement not covered">					command()</span>
 				}
 			})
 		}
@@ -1322,373 +1320,374 @@ exports.info = <span class="fstat-no" title="function not covered" >function(fil
 &nbsp;
 &nbsp;
 // convert a file type to another
-exports.convert = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.convert = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgConvert() {</span>
+<span class="fstat-no" title="function not covered">	function imgConvert() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var args = [options.src]</span>
-<span class="cstat-no" title="statement not covered" >		if (options.quality) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-quality')</span>
-<span class="cstat-no" title="statement not covered" >			args.push(options.quality)</span>
+<span class="cstat-no" title="statement not covered">		var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">		if (options.quality) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-quality')</span>
+<span class="cstat-no" title="statement not covered">			args.push(options.quality)</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}	
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
 			}	
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">		args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">		child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >deferred.reject(err);</span></span>
-			else <span class="cstat-no" title="statement not covered" >deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">deferred.reject(err);</span></span>
+			else <span class="cstat-no" title="statement not covered">deferred.resolve(info(options.dst));</span>
 		});
 &nbsp;
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgConvert)</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgConvert)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 &nbsp;
 // rotate a file
-exports.rotate = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.rotate = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgRotate() {</span>
+<span class="fstat-no" title="function not covered">	function imgRotate() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined || options.degree === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined || options.degree === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">		var args = [options.src]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}	
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
 			}	
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		args.push('-rotate')</span>
-<span class="cstat-no" title="statement not covered" >		args.push(options.degree)</span>
-<span class="cstat-no" title="statement not covered" > 		if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >			args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		args.push('-rotate')</span>
+<span class="cstat-no" title="statement not covered">		args.push(options.degree)</span>
+<span class="cstat-no" title="statement not covered"> 		if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">			args.push(options.background)</span>
 		}
-<span class="cstat-no" title="statement not covered" >		args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">		args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >deferred.reject(err);</span></span>
-			else <span class="cstat-no" title="statement not covered" >deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">		child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">deferred.reject(err);</span></span>
+			else <span class="cstat-no" title="statement not covered">deferred.resolve(info(options.dst));</span>
 		});
 &nbsp;
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgRotate)</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgRotate)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 // resize an image
-exports.resize = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.resize = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgResize() {</span>
+<span class="fstat-no" title="function not covered">	function imgResize() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
-<span class="cstat-no" title="statement not covered" >		if (options.width === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['dim']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.width === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['dim']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.height = options.height || options.width;</span>
+<span class="cstat-no" title="statement not covered">		options.height = options.height || options.width;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">    var args = [options.src]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}	
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
 			}	
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    args.push('-auto-orient')</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-resize')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.width + 'x' + options.height)</span>
-<span class="cstat-no" title="statement not covered" >    if (options.ignoreAspectRatio) {</span>
-<span class="cstat-no" title="statement not covered" >      args[args.length-1] += '!';</span>
+<span class="cstat-no" title="statement not covered">    args.push('-auto-orient')</span>
+<span class="cstat-no" title="statement not covered">    args.push('-resize')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.width + 'x' + options.height)</span>
+<span class="cstat-no" title="statement not covered">    if (options.ignoreAspectRatio) {</span>
+<span class="cstat-no" title="statement not covered">      args[args.length-1] += '!';</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (options.quality) {</span>
-<span class="cstat-no" title="statement not covered" >    	args.push('-quality')</span>
-<span class="cstat-no" title="statement not covered" >    	args.push(options.quality)</span>
+<span class="cstat-no" title="statement not covered">    if (options.quality) {</span>
+<span class="cstat-no" title="statement not covered">    	args.push('-quality')</span>
+<span class="cstat-no" title="statement not covered">    	args.push(options.quality)</span>
     }
-<span class="cstat-no" title="statement not covered" > 		if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >			args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered"> 		if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">			args.push(options.background)</span>
 		}
-<span class="cstat-no" title="statement not covered" >    args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >deferred.reject(err);</span></span>
-<span class="cstat-no" title="statement not covered" >			deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">		child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">deferred.reject(err);</span></span>
+<span class="cstat-no" title="statement not covered">			deferred.resolve(info(options.dst));</span>
 		});
 &nbsp;
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgResize)</span>
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgResize)</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 // crop an image
-exports.crop = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.crop = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgCrop() {</span>
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
-<span class="cstat-no" title="statement not covered" >		if (options.cropwidth === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['dim']);</span></span>
+<span class="fstat-no" title="function not covered">	function imgCrop() {</span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.cropwidth === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['dim']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.cropheight = options.cropheight || options.cropwidth;</span>
-<span class="cstat-no" title="statement not covered" >		options.gravity = options.gravity || 'Center';</span>
-<span class="cstat-no" title="statement not covered" >		options.x = options.x || 0;</span>
-<span class="cstat-no" title="statement not covered" >		options.y = options.y || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.cropheight = options.cropheight || options.cropwidth;</span>
+<span class="cstat-no" title="statement not covered">		options.gravity = options.gravity || 'Center';</span>
+<span class="cstat-no" title="statement not covered">		options.x = options.x || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.y = options.y || 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">    var args = [options.src]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}	
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
 			}	
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    args.push('-auto-orient')</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-gravity')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.gravity)</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-crop')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.cropwidth + 'x'+ options.cropheight + '+' + options.x + '+' + options.y)</span>
-<span class="cstat-no" title="statement not covered" >    if (options.quality) {</span>
-<span class="cstat-no" title="statement not covered" >    	args.push('-quality')</span>
-<span class="cstat-no" title="statement not covered" >    	args.push(options.quality)</span>
+<span class="cstat-no" title="statement not covered">    args.push('-auto-orient')</span>
+<span class="cstat-no" title="statement not covered">    args.push('-gravity')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.gravity)</span>
+<span class="cstat-no" title="statement not covered">    args.push('-crop')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.cropwidth + 'x'+ options.cropheight + '+' + options.x + '+' + options.y)</span>
+<span class="cstat-no" title="statement not covered">    if (options.quality) {</span>
+<span class="cstat-no" title="statement not covered">    	args.push('-quality')</span>
+<span class="cstat-no" title="statement not covered">    	args.push(options.quality)</span>
     }
-<span class="cstat-no" title="statement not covered" > 		if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >			args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered"> 		if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">			args.push(options.background)</span>
 		}
-<span class="cstat-no" title="statement not covered" >    args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >deferred.reject(err);</span></span>
-<span class="cstat-no" title="statement not covered" >			deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">		child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">deferred.reject(err);</span></span>
+<span class="cstat-no" title="statement not covered">			deferred.resolve(info(options.dst));</span>
 		});
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgCrop)</span>
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgCrop)</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 // resize and crop in one shot!
-exports.rescrop = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.rescrop = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgResCrop() {</span>
+<span class="fstat-no" title="function not covered">	function imgResCrop() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
-<span class="cstat-no" title="statement not covered" >		if (options.width === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['dim']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.width === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['dim']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.height = options.height || options.width;</span>
+<span class="cstat-no" title="statement not covered">		options.height = options.height || options.width;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.cropwidth = options.cropwidth || options.width;</span>
-<span class="cstat-no" title="statement not covered" >		options.cropheight = options.cropheight || options.height;</span>
+<span class="cstat-no" title="statement not covered">		options.cropwidth = options.cropwidth || options.width;</span>
+<span class="cstat-no" title="statement not covered">		options.cropheight = options.cropheight || options.height;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.gravity = options.gravity || 'Center';</span>
-<span class="cstat-no" title="statement not covered" >		options.x = options.x || 0;</span>
-<span class="cstat-no" title="statement not covered" >		options.y = options.y || 0;</span>
-<span class="cstat-no" title="statement not covered" >		options.fill = options.fill ? '^' : '';</span>
+<span class="cstat-no" title="statement not covered">		options.gravity = options.gravity || 'Center';</span>
+<span class="cstat-no" title="statement not covered">		options.x = options.x || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.y = options.y || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.fill = options.fill ? '^' : '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">    var args = [options.src]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">		if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}	
 		}
 		else {
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
 			}	
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    args.push('-auto-orient')</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-gravity')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.gravity)</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-resize')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.width + 'x' + options.height + options.fill)</span>
-<span class="cstat-no" title="statement not covered" >    args.push('-crop')</span>
-<span class="cstat-no" title="statement not covered" >    args.push(options.cropwidth + 'x'+ options.cropheight + '+' + options.x + '+' + options.y)</span>
-<span class="cstat-no" title="statement not covered" >    if (options.quality) {</span>
-<span class="cstat-no" title="statement not covered" >    	args.push('-quality')</span>
-<span class="cstat-no" title="statement not covered" >    	args.push(options.quality)</span>
+<span class="cstat-no" title="statement not covered">    args.push('-auto-orient')</span>
+<span class="cstat-no" title="statement not covered">    args.push('-gravity')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.gravity)</span>
+<span class="cstat-no" title="statement not covered">    args.push('-resize')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.width + 'x' + options.height + options.fill)</span>
+<span class="cstat-no" title="statement not covered">    args.push('-crop')</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.cropwidth + 'x'+ options.cropheight + '+' + options.x + '+' + options.y)</span>
+<span class="cstat-no" title="statement not covered">    if (options.quality) {</span>
+<span class="cstat-no" title="statement not covered">    	args.push('-quality')</span>
+<span class="cstat-no" title="statement not covered">    	args.push(options.quality)</span>
     }
-<span class="cstat-no" title="statement not covered" > 		if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >			args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >			args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered"> 		if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">			args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">			args.push(options.background)</span>
 		}
-<span class="cstat-no" title="statement not covered" >    args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">    args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >deferred.reject(err);</span></span>
-<span class="cstat-no" title="statement not covered" >			deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">		child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">deferred.reject(err);</span></span>
+<span class="cstat-no" title="statement not covered">			deferred.resolve(info(options.dst));</span>
 		});
 &nbsp;
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgResCrop)</span>
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgResCrop)</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 // create thumbnails
-exports.thumbnail = <span class="fstat-no" title="function not covered" >function(options) {</span>
+exports.thumbnail = <span class="fstat-no" title="function not covered">function(options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function imgThumbnail() {</span>
+<span class="fstat-no" title="function not covered">	function imgThumbnail() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['path']);</span></span>
-<span class="cstat-no" title="statement not covered" >		if (options.width === undefined) <span class="cstat-no" title="statement not covered" >return deferred.reject(error_messages['dim']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.src === undefined || options.dst === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['path']);</span></span>
+<span class="cstat-no" title="statement not covered">		if (options.width === undefined) <span class="cstat-no" title="statement not covered">return deferred.reject(error_messages['dim']);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		options.height = options.height || options.width;</span>
-<span class="cstat-no" title="statement not covered" >		options.gravity = options.gravity || 'Center';</span>
-<span class="cstat-no" title="statement not covered" >		options.x = options.x || 0;</span>
-<span class="cstat-no" title="statement not covered" >		options.y = options.y || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.height = options.height || options.width;</span>
+<span class="cstat-no" title="statement not covered">		options.gravity = options.gravity || 'Center';</span>
+<span class="cstat-no" title="statement not covered">		options.x = options.x || 0;</span>
+<span class="cstat-no" title="statement not covered">		options.y = options.y || 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		info(options.src).then(<span class="fstat-no" title="function not covered" >function(original) {</span></span>
+<span class="cstat-no" title="statement not covered">		info(options.src).then(<span class="fstat-no" title="function not covered">function(original) {</span></span>
 &nbsp;
 			// dimensions come as strings, convert them to number
-<span class="cstat-no" title="statement not covered" >			original.width = +original.width;</span>
-<span class="cstat-no" title="statement not covered" >			original.height = +original.height;</span>
+<span class="cstat-no" title="statement not covered">			original.width = +original.width;</span>
+<span class="cstat-no" title="statement not covered">			original.height = +original.height;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			var resizewidth = options.width;</span>
-<span class="cstat-no" title="statement not covered" >			var resizeheight = options.height;</span>
+<span class="cstat-no" title="statement not covered">			var resizewidth = options.width;</span>
+<span class="cstat-no" title="statement not covered">			var resizeheight = options.height;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (original.width &gt; original.height) { <span class="cstat-no" title="statement not covered" >resizewidth = ''; </span>}</span>
-			else <span class="cstat-no" title="statement not covered" >if (original.height &gt; original.width) { <span class="cstat-no" title="statement not covered" >resizeheight = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered">			if (original.width &gt; original.height) { <span class="cstat-no" title="statement not covered">resizewidth = ''; </span>}</span>
+			else <span class="cstat-no" title="statement not covered">if (original.height &gt; original.width) { <span class="cstat-no" title="statement not covered">resizeheight = ''; </span>}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	    var args = [options.src]</span>
+<span class="cstat-no" title="statement not covered">	    var args = [options.src]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (options.flatten) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-flatten')</span>
-<span class="cstat-no" title="statement not covered" >				if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >					args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >					args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">			if (options.flatten) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">				if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">					args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">					args.push(options.background)</span>
 				}	
 			}
 			else {
-<span class="cstat-no" title="statement not covered" >				if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >					args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >					args.push(options.background)</span>
-<span class="cstat-no" title="statement not covered" >					args.push('-flatten')</span>
+<span class="cstat-no" title="statement not covered">				if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">					args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">					args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">					args.push('-flatten')</span>
 				}	
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	    args.push('-auto-orient')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('-gravity')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push(options.gravity)</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('-interpolate')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('bicubic')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('-strip')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('-thumbnail')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push(resizewidth + 'x' + resizeheight)</span>
-<span class="cstat-no" title="statement not covered" >	    args.push('-crop')</span>
-<span class="cstat-no" title="statement not covered" >	    args.push(options.width + 'x'+ options.height + '+' + options.x + '+' + options.y)</span>
-<span class="cstat-no" title="statement not covered" >	    if (options.quality) {</span>
-<span class="cstat-no" title="statement not covered" >	    	args.push('-quality')</span>
-<span class="cstat-no" title="statement not covered" >	    	args.push(options.quality)</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-auto-orient')</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-gravity')</span>
+<span class="cstat-no" title="statement not covered">	    args.push(options.gravity)</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-interpolate')</span>
+<span class="cstat-no" title="statement not covered">	    args.push('bicubic')</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-strip')</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-thumbnail')</span>
+<span class="cstat-no" title="statement not covered">	    args.push(resizewidth + 'x' + resizeheight)</span>
+<span class="cstat-no" title="statement not covered">	    args.push('-crop')</span>
+<span class="cstat-no" title="statement not covered">	    args.push(options.width + 'x'+ options.height + '+' + options.x + '+' + options.y)</span>
+<span class="cstat-no" title="statement not covered">	    if (options.quality) {</span>
+<span class="cstat-no" title="statement not covered">	    	args.push('-quality')</span>
+<span class="cstat-no" title="statement not covered">	    	args.push(options.quality)</span>
 	    }
-<span class="cstat-no" title="statement not covered" >			if (options.background) {</span>
-<span class="cstat-no" title="statement not covered" >				args.push('-background')</span>
-<span class="cstat-no" title="statement not covered" >				args.push(options.background)</span>
+<span class="cstat-no" title="statement not covered">			if (options.background) {</span>
+<span class="cstat-no" title="statement not covered">				args.push('-background')</span>
+<span class="cstat-no" title="statement not covered">				args.push(options.background)</span>
 			}
-<span class="cstat-no" title="statement not covered" >	    args.push(options.dst)</span>
+<span class="cstat-no" title="statement not covered">	    args.push(options.dst)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			child = exec('convert', args, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >				if (err) <span class="cstat-no" title="statement not covered" >return deferred.reject(err);</span></span>
-<span class="cstat-no" title="statement not covered" >				deferred.resolve(info(options.dst));</span>
+<span class="cstat-no" title="statement not covered">			child = exec('convert', args, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">				if (err) <span class="cstat-no" title="statement not covered">return deferred.reject(err);</span></span>
+<span class="cstat-no" title="statement not covered">				deferred.resolve(info(options.dst));</span>
 			});
 &nbsp;
-		}, <span class="fstat-no" title="function not covered" >function (err) {</span> <span class="cstat-no" title="statement not covered" >deferred.reject(err); </span>});
+		}, <span class="fstat-no" title="function not covered">function (err) {</span> <span class="cstat-no" title="statement not covered">deferred.reject(err); </span>});
 &nbsp;
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	directoryCheck(options, imgThumbnail)</span>
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	directoryCheck(options, imgThumbnail)</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 // issue your own ImageMagick command
-exports.exec = <span class="fstat-no" title="function not covered" >function(cmd) {</span>
+exports.exec = <span class="fstat-no" title="function not covered">function(cmd) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var deferred = Q.defer();</span>
+<span class="cstat-no" title="statement not covered">	var deferred = Q.defer();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	process.nextTick(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered">	process.nextTick(<span class="fstat-no" title="function not covered">function () {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		child = command(cmd, <span class="fstat-no" title="function not covered" >function(err, stdout, stderr) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) <span class="cstat-no" title="statement not covered" >return deferred.reject(err);</span></span>
-<span class="cstat-no" title="statement not covered" >			deferred.resolve(stdout);</span>
+<span class="cstat-no" title="statement not covered">		child = command(cmd, <span class="fstat-no" title="function not covered">function(err, stdout, stderr) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) <span class="cstat-no" title="statement not covered">return deferred.reject(err);</span></span>
+<span class="cstat-no" title="statement not covered">			deferred.resolve(stdout);</span>
 		});
 &nbsp;
 	})
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return deferred.promise;</span>
+<span class="cstat-no" title="statement not covered">	return deferred.promise;</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 20:22:38 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:58:38 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
