@@ -1,7 +1,7 @@
 # test coverage for  [easyimage (v2.1.0)](https://github.com/hacksparrow/node-easyimage)  [![npm package](https://img.shields.io/npm/v/npmtest-easyimage.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-easyimage) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-easyimage.svg)](https://travis-ci.org/npmtest/node-npmtest-easyimage)
 #### A promise-based, user-friendly module for processing images in Node.js
 
-[![NPM](https://nodei.co/npm/easyimage.png?downloads=true)](https://www.npmjs.com/package/easyimage)
+[![NPM](https://nodei.co/npm/easyimage.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/easyimage)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-easyimage/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-easyimage/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-easyimage/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-easyimage/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-easyimage/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-easyimage/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-easyimage/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-easyimage/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-easyimage/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-easyimage/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-easyimage%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-easyimage/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-easyimage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-easyimage/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-easyimage/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-easyimage%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-easyimage/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-easyimage/build/test-report.html](https://npmtest.github.io/node-npmtest-easyimage/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-easyimage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-easyimage/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-easyimage/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-easyimage/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-easyimage/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-easyimage/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-easyimage/build/screenCapture.npmPackageListing.svg)
 
@@ -27,8 +33,7 @@
 
 {
     "author": {
-        "name": "Hage Yaapa",
-        "email": "captain@hacksparrow.com"
+        "name": "Hage Yaapa"
     },
     "bugs": {
         "url": "https://github.com/hacksparrow/node-easyimage/issues"
@@ -67,13 +72,11 @@
     "main": "easyimage.js",
     "maintainers": [
         {
-            "name": "hacksparrow",
-            "email": "captain@hacksparrow.com"
+            "name": "hacksparrow"
         }
     ],
     "name": "easyimage",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/hacksparrow/node-easyimage.git"
