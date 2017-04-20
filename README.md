@@ -1,4 +1,7 @@
-# test coverage for  [easyimage (v2.1.0)](https://github.com/hacksparrow/node-easyimage)  [![npm package](https://img.shields.io/npm/v/npmtest-easyimage.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-easyimage) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-easyimage.svg)](https://travis-ci.org/npmtest/node-npmtest-easyimage)
+# npmtest-easyimage
+
+#### basic test coverage for  [easyimage (v2.1.0)](https://github.com/hacksparrow/node-easyimage)  [![npm package](https://img.shields.io/npm/v/npmtest-easyimage.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-easyimage) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-easyimage.svg)](https://travis-ci.org/npmtest/node-npmtest-easyimage)
+
 #### A promise-based, user-friendly module for processing images in Node.js
 
 [![NPM](https://nodei.co/npm/easyimage.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/easyimage)
